@@ -1,9 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'screens/signin_screen.dart';
 
-import 'register_screen.dart';
-import 'splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: RegisterScreen(),
+      home: SignINScreen(),
     );
   }
 }
