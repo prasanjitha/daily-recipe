@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'screens/home_page.dart';
 import 'screens/signin_screen.dart';
 
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: SignINScreen(),
+      home: HomePage(),
     );
   }
 }
