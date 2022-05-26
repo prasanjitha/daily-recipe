@@ -18,7 +18,9 @@ class SignINScreen extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              SizedBox(height: 40.0,),
+              SizedBox(
+                height: 40.0,
+              ),
               Image.asset(
                 'assets/images/logo02.png',
                 fit: BoxFit.cover,
@@ -77,35 +79,44 @@ class SignINScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
- Text(
-                'Forgot Password?',
-                style: TextStyle(
-                    fontSize: 12,
-                    color: Color(0xff128FAE),
+                  Text(
+                    'Forgot Password?',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Color(0xff128FAE),
                     ),
-              ),
+                  ),
                 ],
               ),
-                Container(
-                  width:315,
-                  height: 50,
-                  decoration: BoxDecoration(
+              Container(
+                width: 315,
+                height: 50,
+                decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
-                    color: Color(0xffF55A00)
-                  ),
-                  child: Center(
-                    child: Text('Sign In',style: TextStyle(fontSize: 16,color: Colors.white,fontWeight: FontWeight.bold),),
+                    color: Color(0xffF55A00)),
+                child: Center(
+                  child: Text(
+                    'Sign In',
+                    style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('Don\'t have an account?',style: TextStyle(fontSize:14,color: Colors.white ),),
-                    Text(' Register',style: TextStyle(fontSize:14,color: Colors.orange ),),
-                  ],
-                )
-
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Don\'t have an account?',
+                    style: TextStyle(fontSize: 14, color: Colors.white),
+                  ),
+                  Text(
+                    ' Register',
+                    style: TextStyle(fontSize: 14, color: Colors.orange),
+                  ),
+                ],
+              )
             ],
           )
         ],
