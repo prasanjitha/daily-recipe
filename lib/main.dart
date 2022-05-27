@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'screens/home_page.dart';
+import 'screens/recipe_screen.dart';
 import 'screens/signin_screen.dart';
 
 
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: RecipeScreen(),
     );
   }
 }
