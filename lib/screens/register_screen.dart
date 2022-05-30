@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:daily_recipe/screens/signin_screen.dart';
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -108,8 +109,13 @@ class RegisterScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Already registered? Sign in.',style: TextStyle(fontSize:14,color: Colors.white ),),
-                    Text(' Sign in.',style: TextStyle(fontSize:14,color: Colors.orange ),),
+                    Text('Already registered? ',style: TextStyle(fontSize:14,color: Colors.white ),),
+                    GestureDetector(
+                       onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignINScreen()));
+
+                  },
+                      child: Text(' Sign in.',style: TextStyle(fontSize:14,color: Colors.orange ),)),
                   ],
                 )
 

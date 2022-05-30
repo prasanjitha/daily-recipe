@@ -1,5 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:daily_recipe/favorite_screen.dart';
+import 'package:daily_recipe/screens/motification_screen.dart';
+import 'package:daily_recipe/screens/recipe_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -18,7 +21,12 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Image.asset('assets/images/menu.png'),
-                Image.asset('assets/images/group04.png'),
+                GestureDetector(
+                   onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => NotificationScreen()));
+
+                  },
+                  child: Image.asset('assets/images/group04.png')),
               ],
             ),
             SizedBox(height: 10.0,),
@@ -73,104 +81,110 @@ class HomePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  width: 147,
-                  height: 210,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Color(0xffF7F8FC)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Icon(Icons.favorite, color: Color(0xffF55A00)),
-                        Image.asset(
-                          'assets/images/image01.png',
-                          width: 144,
-                          height: 86,
-                        ),
-                        Text(
-                          'Breakfast',
-                          style:
-                              TextStyle(fontSize: 8, color: Color(0xff128FAE)),
-                        ),
-                        Text(
-                          'French Toast with Berries',
-                          style:
-                              TextStyle(fontSize: 14, color: Color(0xff1F222B)),
-                        ),
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.star,
-                              size: 10,
-                              color: Color(0xffF55A00),
-                            ),
-                            Icon(
-                              Icons.star,
-                              size: 10,
-                              color: Color(0xffF55A00),
-                            ),
-                            Icon(
-                              Icons.star,
-                              size: 10,
-                              color: Color(0xffF55A00),
-                            ),
-                            Icon(
-                              Icons.star,
-                              size: 10,
-                              color: Color(0xffF55A00),
-                            ),
-                            Icon(
-                              Icons.star,
-                              size: 10,
-                              color: Color(0xffF55A00),
-                            ),
-                          ],
-                        ),
-                        Text(
-                          '120 Calories',
-                          style: TextStyle(
-                              fontSize: 8,
-                              color: Color(0xffF55A00),
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Row(
-                          children: [
-                            Row(
-                              children: [
-                                Image.asset('assets/images/time.png'),
-                                SizedBox(
-                                  width: 5.0,
-                                ),
-                                Text(
-                                  '10 mins',
-                                  style: TextStyle(
-                                      fontSize: 8, color: Color(0xffB2B7C6)),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20.0,
-                            ),
-                            Row(
-                              children: [
-                                Image.asset('assets/images/service-desk.png'),
-                                SizedBox(
-                                  width: 5.0,
-                                ),
-                                Text(
-                                  '1 Serving',
-                                  style: TextStyle(
-                                      fontSize: 8, color: Color(0xffB2B7C6)),
-                                ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
+                GestureDetector(
+                 onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => RecipeScreen()));
+
+                  },   
+                  child: Container(
+                    width: 147,
+                    height: 210,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Color(0xffF7F8FC)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Icon(Icons.favorite, color: Color(0xffF55A00)),
+                          Image.asset(
+                            'assets/images/image01.png',
+                            width: 144,
+                            height: 86,
+                          ),
+                          Text(
+                            'Breakfast',
+                            style:
+                                TextStyle(fontSize: 8, color: Color(0xff128FAE)),
+                          ),
+                          Text(
+                            'French Toast with Berries',
+                            style:
+                                TextStyle(fontSize: 14, color: Color(0xff1F222B)),
+                          ),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.star,
+                                size: 10,
+                                color: Color(0xffF55A00),
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 10,
+                                color: Color(0xffF55A00),
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 10,
+                                color: Color(0xffF55A00),
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 10,
+                                color: Color(0xffF55A00),
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 10,
+                                color: Color(0xffF55A00),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            '120 Calories',
+                            style: TextStyle(
+                                fontSize: 8,
+                                color: Color(0xffF55A00),
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Row(
+                            children: [
+                              Row(
+                                children: [
+                                  Image.asset('assets/images/time.png'),
+                                  SizedBox(
+                                    width: 5.0,
+                                  ),
+                                  Text(
+                                    '10 mins',
+                                    style: TextStyle(
+                                        fontSize: 8, color: Color(0xffB2B7C6)),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                width: 20.0,
+                              ),
+                              Row(
+                                children: [
+                                  Image.asset('assets/images/service-desk.png'),
+                                  SizedBox(
+                                    width: 5.0,
+                                  ),
+                                  Text(
+                                    '1 Serving',
+                                    style: TextStyle(
+                                        fontSize: 8, color: Color(0xffB2B7C6)),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 )
@@ -280,22 +294,28 @@ class HomePage extends StatelessWidget {
               ],
             ),
             SizedBox(height: 10.0,),
-             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Recommended',
-                  style: TextStyle(
-                      fontSize: 18,
-                      color: Color(0xff1F222B),
-                      fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  'See All ',
-                  style: TextStyle(fontSize: 14, color: Color(0xffF55A00)),
-                ),
-              ],
-            ),
+             GestureDetector(
+                onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => FavouriteScreen()));
+
+                  },
+               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Recommended',
+                    style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xff1F222B),
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'See All ',
+                    style: TextStyle(fontSize: 14, color: Color(0xffF55A00)),
+                  ),
+                ],
+                         ),
+             ),
 
             Container(
               height: 210,

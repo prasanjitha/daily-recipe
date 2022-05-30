@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:daily_recipe/screens/home_page.dart';
 import 'package:flutter/material.dart';
+
+import 'register_screen.dart';
 
 class SignINScreen extends StatelessWidget {
   const SignINScreen({Key? key}) : super(key: key);
@@ -88,19 +91,25 @@ class SignINScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(
-                width: 315,
-                height: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20.0),
-                    color: Color(0xffF55A00)),
-                child: Center(
-                  child: Text(
-                    'Sign In',
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
+              GestureDetector(
+                 onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomePage()));
+
+                  },
+                child: Container(
+                  width: 315,
+                  height: 50,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0),
+                      color: Color(0xffF55A00)),
+                  child: Center(
+                    child: Text(
+                      'Sign In',
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
               ),
@@ -111,9 +120,15 @@ class SignINScreen extends StatelessWidget {
                     'Don\'t have an account?',
                     style: TextStyle(fontSize: 14, color: Colors.white),
                   ),
-                  Text(
-                    ' Register',
-                    style: TextStyle(fontSize: 14, color: Colors.orange),
+                  GestureDetector(
+                     onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => RegisterScreen()));
+
+                  },
+                    child: Text(
+                      ' Register',
+                      style: TextStyle(fontSize: 14, color: Colors.orange),
+                    ),
                   ),
                 ],
               )
