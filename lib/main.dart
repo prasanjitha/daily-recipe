@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'favorite_screen.dart';
 import 'screens/home_page.dart';
 import 'screens/motification_screen.dart';
 import 'screens/recipe_screen.dart';
@@ -34,6 +33,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: SplashScreen(),
+
     );
   }
 }
