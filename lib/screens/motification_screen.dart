@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:daily_recipe/screens/home_page.dart';
 import 'package:flutter/material.dart';
 
 class NotificationScreen extends StatelessWidget {
@@ -10,11 +11,17 @@ class NotificationScreen extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(
+        child: ListView(
           children: [
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-              Image.asset('assets/images/menu.png'),
+              GestureDetector(
+                onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomePage()));
+
+                  },
+                child: Image.asset('assets/images/menu.png')),
             ]),
+            SizedBox(height: 10.0,),
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               Text('Notifications', style: TextStyle(fontSize: 20)),
               Text('Mark All As Read',

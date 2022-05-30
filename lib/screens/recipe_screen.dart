@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 
+import 'home_page.dart';
+import 'motification_screen.dart';
+
 class RecipeScreen extends StatefulWidget {
   const RecipeScreen({Key? key}) : super(key: key);
 
@@ -21,8 +24,18 @@ class _RecipeScreenState extends State<RecipeScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Image.asset('assets/images/group06.png'),
-                Image.asset('assets/images/group04.png'),
+                GestureDetector(
+                    onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomePage()));
+
+                  },
+                  child: Image.asset('assets/images/group06.png')),
+                GestureDetector(
+                    onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => NotificationScreen()));
+
+                  },
+                  child: Image.asset('assets/images/group04.png')),
               ],
             ),
             SizedBox(
