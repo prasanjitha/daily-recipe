@@ -29,7 +29,7 @@ class _RecipeScreenState extends State<RecipeScreen> {
                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomePage()));
 
                   },
-                  child: Image.asset('assets/images/group06.png')),
+                  child: Image.asset('assets/images/group06.png',width: 20.0,)),
                 GestureDetector(
                     onTap: (){
                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => NotificationScreen()));

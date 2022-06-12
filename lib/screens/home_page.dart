@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:daily_recipe/favorite_screen.dart';
+import 'package:daily_recipe/screens/favorite_screen.dart';
 import 'package:daily_recipe/screens/motification_screen.dart';
 import 'package:daily_recipe/screens/recipe_screen.dart';
+import 'package:daily_recipe/screens/setting_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -20,7 +22,15 @@ class HomePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Image.asset('assets/images/menu.png'),
+                GestureDetector(
+                  onTap: (){
+                 
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => FavoriteScreen()));
+
+                  
+                  },
+                  
+                  child: Image.asset('assets/images/menu.png')),
                 GestureDetector(
                    onTap: (){
                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => NotificationScreen()));
@@ -55,7 +65,12 @@ class HomePage extends StatelessWidget {
                       hintText: "search",
                       prefixIcon: Icon(Icons.search)),
                 )),
-                Image.asset('assets/images/filter.png'),
+                GestureDetector(
+                    onTap: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => SettingScreen()));
+
+                  },
+                  child: Image.asset('assets/images/filter.png')),
               ],
             ),
             SizedBox(height: 20.0,),
